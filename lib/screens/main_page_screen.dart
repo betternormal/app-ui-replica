@@ -1,8 +1,9 @@
+import 'package:carrot_clone/screens/chat_list_screen.dart';
 import 'package:carrot_clone/screens/home_page_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
-import 'life_style_screen.dart';
+import 'package:carrot_clone/screens/around_me_screen.dart';
+import 'package:carrot_clone/screens/life_style_screen.dart';
 
 class MainPageScreen extends StatefulWidget {
   @override
@@ -10,12 +11,12 @@ class MainPageScreen extends StatefulWidget {
 }
 
 class _MainPageScreenState extends State<MainPageScreen> {
-  var _pageIndex = 1;
+  var _pageIndex = 3;
   var _pages = [
     HomePageScreen(),
     LifeStyleScreen(),
-    Container(),
-    Container(),
+    AroundMeScreen(),
+    ChatListScreen(),
     Container(),
   ];
 
