@@ -8,7 +8,7 @@ class HomePageListItem extends StatelessWidget {
     required this.thumbnail,
     required this.title,
     required this.subtitle,
-    required this.author,
+    required this.price,
     required this.publishDate,
     required this.readDuration,
   }) : super(key: key);
@@ -16,7 +16,7 @@ class HomePageListItem extends StatelessWidget {
   final Widget thumbnail;
   final String title;
   final String subtitle;
-  final String author;
+  final String price;
   final String publishDate;
   final String readDuration;
 
@@ -42,7 +42,7 @@ class HomePageListItem extends StatelessWidget {
                 child: HomePageArticle(
                   title: title,
                   subtitle: subtitle,
-                  author: author,
+                  price: price,
                   publishDate: publishDate,
                   readDuration: readDuration,
                 ),

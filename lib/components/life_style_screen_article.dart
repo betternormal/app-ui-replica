@@ -66,7 +66,7 @@ class LifeStyleScreenArticle extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                        '아이디, 중산동',
+                        author,
                       style: TextStyle(
                         color: Colors.black54
                       ),

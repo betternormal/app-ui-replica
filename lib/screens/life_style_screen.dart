@@ -1,6 +1,5 @@
 import 'package:carrot_clone/components/life_style_screen_list_item.dart';
 import 'package:flutter/material.dart';
-import 'package:carrot_clone/components/post_tile.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class LifeStyleScreen extends StatefulWidget {
@@ -15,60 +14,46 @@ class _LifeStyleScreenState extends State<LifeStyleScreen> {
     await Future.delayed(const Duration(seconds: 1));
   }
 
-  List<PostTile> sentencesList = [
-    PostTile(sentenceKor: '야호', sentenceEng: 'yahoo',),
-    PostTile(sentenceKor: '야호2', sentenceEng: 'yahoo2',),
-    PostTile(sentenceKor: '야호3', sentenceEng: 'yahoo3',),
-    PostTile(sentenceKor: '야호4', sentenceEng: 'yahoo4',),
-    PostTile(sentenceKor: '야호5', sentenceEng: 'yahoo5',),
-    PostTile(sentenceKor: '야호', sentenceEng: 'yahoo',),
-    PostTile(sentenceKor: '야호2', sentenceEng: 'yahoo2',),
-    PostTile(sentenceKor: '야호3', sentenceEng: 'yahoo3',),
-    PostTile(sentenceKor: '야호4', sentenceEng: 'yahoo4',),
-    PostTile(sentenceKor: '야호5', sentenceEng: 'yahoo5',),
-    PostTile(sentenceKor: '야호', sentenceEng: 'yahoo',),
-  ];
-
   List<LifeStyleScreenListItem> postList = [
     LifeStyleScreenListItem(
       title: '1인 대관 헬스장 정보 있나요?',
       tag: '건강',
-      author: 'Flutter',
+      author: '아이디 · 중산동',
       publishDate: 'Feb 26',
       readDuration: '12 mins',
     ),
     LifeStyleScreenListItem(
       title: '오늘 눈오나요',
       tag: '동네질문',
-      author: 'Dash',
+      author: '아이디2 · 운서동',
       publishDate: 'Dec 28',
       readDuration: '5 mins',
     ),
     LifeStyleScreenListItem(
       title: '젤네일 제거 해주실분',
       tag: '해주세요',
-      author: 'Dash',
+      author: '아이디3 · 운서동',
       publishDate: 'Dec 28',
       readDuration: '5 mins',
     ),
     LifeStyleScreenListItem(
       title: '미니행거 무료나눔',
       tag: '해주세요',
-      author: 'Flutter',
+      author: '아이디 · 중산동',
       publishDate: 'Feb 26',
       readDuration: '12 mins',
     ),
     LifeStyleScreenListItem(
       title: '책상팝니다',
       tag: '해주세요',
-      author: 'Dash',
+      author: '아이디 · 중산동',
       publishDate: 'Dec 28',
       readDuration: '5 mins',
     ),
     LifeStyleScreenListItem(
       title: '미니행거 무료나눔',
       tag: '해주세요',
-      author: 'Flutter',
+      author: '아이디 · 중산동',
       publishDate: 'Feb 26',
       readDuration: '12 mins',
     ),
@@ -86,25 +71,26 @@ class _LifeStyleScreenState extends State<LifeStyleScreen> {
           } else {
             return Column(
               children: [
-                Row(
-                  children: <Widget>[
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 10.0),
-                      child: Container(
-                        padding: EdgeInsets.all(10.0),
-                        color: Color(0xFFeff1f3),
-                        child: Text(
-                          'tag',
-                          maxLines: 2,
-                          overflow: TextOverflow.ellipsis,
-                          style: const TextStyle(
-                            fontSize: 12.0,
-                            color: Colors.black54,
-                          ),
-                        ),
+                Container(
+                  color: Color(0xFFf0f1f4),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 15.0),
+                    child: SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        children: <Widget>[
+                          TagItem(tagTitle: '동네질문'),
+                          TagItem(tagTitle: '동네맛집'),
+                          TagItem(tagTitle: '동네소식'),
+                          TagItem(tagTitle: '분실/실종'),
+                          TagItem(tagTitle: '동네질문'),
+                          TagItem(tagTitle: '동네맛집'),
+                          TagItem(tagTitle: '동네소식'),
+                          TagItem(tagTitle: '분실/실종'),
+                        ],
                       ),
                     ),
-                  ],
+                  ),
                 ),
                 Expanded(
                   child: ListView.separated(
@@ -136,6 +122,39 @@ class _LifeStyleScreenState extends State<LifeStyleScreen> {
         child: const Icon(
           FontAwesomeIcons.pencilAlt,
           size: 20.0,
+        ),
+      ),
+    );
+  }
+}
+
+class TagItem extends StatelessWidget {
+
+  final String tagTitle;
+  TagItem({required this.tagTitle});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(right: 10.0),
+      child: Container(
+        decoration: BoxDecoration(
+          color: Colors.white,
+          border: Border.all(
+            width: 1,
+            color: Color(0xFFd6d8df),
+          ),
+          borderRadius: BorderRadius.circular(5)
+        ),
+        padding: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+        child: Text(
+          tagTitle,
+          maxLines: 2,
+          overflow: TextOverflow.ellipsis,
+          style: const TextStyle(
+            fontSize: 15.0,
+            color: Colors.black87,
+          ),
         ),
       ),
     );

@@ -6,14 +6,14 @@ class HomePageArticle extends StatelessWidget {
     Key? key,
     required this.title,
     required this.subtitle,
-    required this.author,
+    required this.price,
     required this.publishDate,
     required this.readDuration,
   }) : super(key: key);
 
   final String title;
   final String subtitle;
-  final String author;
+  final String price;
   final String publishDate;
   final String readDuration;
 
@@ -46,7 +46,7 @@ class HomePageArticle extends StatelessWidget {
               ),
               const Padding(padding: EdgeInsets.only(bottom: 10.0)),
               Text(
-                '30,000원',
+                price,
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
                 style: const TextStyle(
@@ -58,33 +58,21 @@ class HomePageArticle extends StatelessWidget {
           ),
         ),
         Expanded(
-          child: Column(
+          child: Row(
             crossAxisAlignment: CrossAxisAlignment.end,
             mainAxisAlignment: MainAxisAlignment.end,
-            children: <Widget>[
-              Text(
-                author,
-                style: const TextStyle(
-                  fontSize: 12.0,
-                  color: Colors.black87,
-                ),
+            children: [
+              Icon(
+                FontAwesomeIcons.comment,
+                size: 20.0,
+                color: Colors.black54,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Icon(
-                    FontAwesomeIcons.comment,
-                    size: 20.0,
-                    color: Colors.black54,
-                  ),
-                  SizedBox(width: 10.0),
-                  Icon(
-                    FontAwesomeIcons.heart,
-                    size: 20.0,
-                    color: Colors.black54,
-                  ),
-                ],
-              )
+              SizedBox(width: 10.0),
+              Icon(
+                FontAwesomeIcons.heart,
+                size: 20.0,
+                color: Colors.black54,
+              ),
             ],
           ),
         ),
