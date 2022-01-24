@@ -64,6 +64,67 @@ class _ChatListScreenState extends State<ChatListScreen> {
       title: Text('아이디 6'),
       subtitle: Text('마지막 채팅내용'),
     ),
+    ListTile(
+      leading: CircleAvatar(child: Icon(FontAwesomeIcons.userAlt),),
+      title: Text('아이디 1'),
+      subtitle: Text('마지막 채팅내용'),
+      trailing: SizedBox(
+        height: 50.0,
+        width: 50.0,
+        child: Image.network('http://image.hanssem.com/hsimg/gds/368/502/502858_A1.jpg?v=20210820095507'),
+      ),
+    ),
+    ListTile(
+      leading: CircleAvatar(child: Icon(FontAwesomeIcons.userAlt),),
+      title: Text('아이디 2'),
+      subtitle: Text('마지막 채팅내용'),
+      trailing: SizedBox(
+        height: 50.0,
+        width: 50.0,
+        child: Image.network('http://image.hanssem.com/hsimg/gds/368/502/502858_A1.jpg?v=20210820095507'),
+      ),
+    ),
+    ListTile(
+      leading: CircleAvatar(child: Icon(FontAwesomeIcons.userAlt),),
+      title: Text('아이디 3'),
+      subtitle: Text('마지막 채팅내용'),
+      trailing: SizedBox(
+        height: 50.0,
+        width: 50.0,
+        child: Image.network('http://image.hanssem.com/hsimg/gds/368/502/502858_A1.jpg?v=20210820095507'),
+      ),
+    ),
+    ListTile(
+      leading: CircleAvatar(child: Icon(FontAwesomeIcons.userAlt),),
+      title: Text('아이디 1'),
+      subtitle: Text('마지막 채팅내용'),
+      trailing: SizedBox(
+        height: 50.0,
+        width: 50.0,
+        child: Image.network('http://image.hanssem.com/hsimg/gds/368/502/502858_A1.jpg?v=20210820095507'),
+      ),
+    ),
+    ListTile(
+      leading: CircleAvatar(child: Icon(FontAwesomeIcons.userAlt),),
+      title: Text('아이디 2'),
+      subtitle: Text('마지막 채팅내용'),
+      trailing: SizedBox(
+        height: 50.0,
+        width: 50.0,
+        child: Image.network('http://image.hanssem.com/hsimg/gds/368/502/502858_A1.jpg?v=20210820095507'),
+      ),
+    ),
+    ListTile(
+      leading: CircleAvatar(child: Icon(FontAwesomeIcons.userAlt),),
+      title: Text('아이디 3'),
+      subtitle: Text('마지막 채팅내용'),
+      trailing: SizedBox(
+        height: 50.0,
+        width: 50.0,
+        child: Image.network('http://image.hanssem.com/hsimg/gds/368/502/502858_A1.jpg?v=20210820095507'),
+      ),
+    ),
+
   ];
 
 

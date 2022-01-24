@@ -1,4 +1,4 @@
-import 'package:carrot_clone/components/home_page_list_item.dart';
+import 'package:carrot_clone/components/home_screen_list_item.dart';
 import 'package:flutter/material.dart';
 
 class HomePageScreen extends StatefulWidget {
@@ -13,8 +13,8 @@ class _HomePageScreenState extends State<HomePageScreen> {
     await Future.delayed(const Duration(seconds: 1));
   }
 
-  List<HomePageListItem> postList = [
-    HomePageListItem(
+  List<HomeScreenListItem> postList = [
+    HomeScreenListItem(
       thumbnail: Container(
         child: Image.network('http://image.hanssem.com/hsimg/gds/368/502/502858_A1.jpg?v=20210820095507'),
       ),
@@ -24,7 +24,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
       publishDate: 'Dec 28',
       readDuration: '5 mins',
     ),
-    HomePageListItem(
+    HomeScreenListItem(
       thumbnail: Container(
         child: Image.network('https://media.bunjang.co.kr/product/173950560_1_1640241919_w180.jpg'),
         // decoration: const BoxDecoration(color: Colors.blue),
@@ -35,7 +35,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
       publishDate: 'Feb 26',
       readDuration: '12 mins',
     ),
-    HomePageListItem(
+    HomeScreenListItem(
       thumbnail: Container(
         child: Image.network('http://image.hanssem.com/hsimg/gds/368/502/502858_A1.jpg?v=20210820095507'),
         // decoration: const BoxDecoration(color: Colors.pink),
@@ -46,7 +46,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
       publishDate: 'Dec 28',
       readDuration: '5 mins',
     ),
-    HomePageListItem(
+    HomeScreenListItem(
       thumbnail: Container(
         child: Image.network('https://media.bunjang.co.kr/product/173950560_1_1640241919_w180.jpg'),
         // decoration: const BoxDecoration(color: Colors.blue),
@@ -57,7 +57,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
       publishDate: 'Feb 26',
       readDuration: '12 mins',
     ),
-    HomePageListItem(
+    HomeScreenListItem(
       thumbnail: Container(
         child: Image.network('http://image.hanssem.com/hsimg/gds/368/502/502858_A1.jpg?v=20210820095507'),
       ),
@@ -67,7 +67,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
       publishDate: 'Dec 28',
       readDuration: '5 mins',
     ),
-    HomePageListItem(
+    HomeScreenListItem(
       thumbnail: Container(
         child: Image.network('https://media.bunjang.co.kr/product/173950560_1_1640241919_w180.jpg'),
       ),

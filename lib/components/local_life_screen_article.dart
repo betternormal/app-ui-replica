@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class LifeStyleScreenArticle extends StatelessWidget {
-  const LifeStyleScreenArticle({
+class LocalLifeScreenArticle extends StatelessWidget {
+  const LocalLifeScreenArticle({
     Key? key,
     required this.title,
     required this.tag,

@@ -21,7 +21,8 @@ class MyApp extends StatelessWidget {
           return MaterialApp(home: Splash(),);
         } else {
           return MaterialApp(
-            title: 'Flutter Demo',
+            debugShowCheckedModeBanner: false,
+            title: 'carrot market',
             theme: ThemeData(
               primaryColor: Color(0xFFff723a),
             ),

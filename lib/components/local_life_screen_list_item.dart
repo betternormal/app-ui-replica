@@ -1,10 +1,10 @@
-import 'package:carrot_clone/components/life_style_screen_article.dart';
+import 'package:carrot_clone/components/local_life_screen_article.dart';
 import 'package:flutter/material.dart';
 
-import 'home_page_article.dart';
+import 'home_screen_article.dart';
 
-class LifeStyleScreenListItem extends StatelessWidget {
-  const LifeStyleScreenListItem({
+class LocalLifeScreenListItem extends StatelessWidget {
+  const LocalLifeScreenListItem({
     Key? key,
     required this.title,
     required this.tag,
@@ -32,7 +32,7 @@ class LifeStyleScreenListItem extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Expanded(
-              child: LifeStyleScreenArticle(
+              child: LocalLifeScreenArticle(
                 title: title,
                 tag: tag,
                 author: author,

@@ -1,56 +1,57 @@
-import 'package:carrot_clone/components/life_style_screen_list_item.dart';
+import 'package:carrot_clone/components/local_life_screen_list_item.dart';
+import 'package:carrot_clone/utilities/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class LifeStyleScreen extends StatefulWidget {
+class LocalLifeScreen extends StatefulWidget {
 
   @override
-  _LifeStyleScreenState createState() => _LifeStyleScreenState();
+  _LocalLifeScreenState createState() => _LocalLifeScreenState();
 }
 
-class _LifeStyleScreenState extends State<LifeStyleScreen> {
+class _LocalLifeScreenState extends State<LocalLifeScreen> {
 
   Future getSentencesList() async {
     await Future.delayed(const Duration(seconds: 1));
   }
 
-  List<LifeStyleScreenListItem> postList = [
-    LifeStyleScreenListItem(
+  List<LocalLifeScreenListItem> postList = [
+    LocalLifeScreenListItem(
       title: '1인 대관 헬스장 정보 있나요?',
       tag: '건강',
       author: '아이디 · 중산동',
       publishDate: 'Feb 26',
       readDuration: '12 mins',
     ),
-    LifeStyleScreenListItem(
+    LocalLifeScreenListItem(
       title: '오늘 눈오나요',
       tag: '동네질문',
       author: '아이디2 · 운서동',
       publishDate: 'Dec 28',
       readDuration: '5 mins',
     ),
-    LifeStyleScreenListItem(
+    LocalLifeScreenListItem(
       title: '젤네일 제거 해주실분',
       tag: '해주세요',
       author: '아이디3 · 운서동',
       publishDate: 'Dec 28',
       readDuration: '5 mins',
     ),
-    LifeStyleScreenListItem(
+    LocalLifeScreenListItem(
       title: '미니행거 무료나눔',
       tag: '해주세요',
       author: '아이디 · 중산동',
       publishDate: 'Feb 26',
       readDuration: '12 mins',
     ),
-    LifeStyleScreenListItem(
+    LocalLifeScreenListItem(
       title: '책상팝니다',
       tag: '해주세요',
       author: '아이디 · 중산동',
       publishDate: 'Dec 28',
       readDuration: '5 mins',
     ),
-    LifeStyleScreenListItem(
+    LocalLifeScreenListItem(
       title: '미니행거 무료나눔',
       tag: '해주세요',
       author: '아이디 · 중산동',
@@ -100,11 +101,7 @@ class _LifeStyleScreenState extends State<LifeStyleScreen> {
                       return postList[index];
                     },
                     separatorBuilder: (context, index) {
-                      return const Divider(
-                        thickness: 10,
-                        endIndent: 0,
-                        color: Color(0xFFeff1f3),
-                      );
+                      return kThickDivider;
                     },
                   ),
                 ),

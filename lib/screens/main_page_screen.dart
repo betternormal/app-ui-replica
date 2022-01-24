@@ -1,9 +1,16 @@
+import 'package:carrot_clone/components/around_me_screen_actions.dart';
+import 'package:carrot_clone/components/chat_screen_actions.dart';
+import 'package:carrot_clone/components/home_screen_actions.dart';
+import 'package:carrot_clone/components/local_life_screen_actions.dart';
+import 'package:carrot_clone/components/my_carrot_screen_actions.dart';
 import 'package:carrot_clone/screens/chat_list_screen.dart';
 import 'package:carrot_clone/screens/home_page_screen.dart';
+import 'package:carrot_clone/screens/my_carrot_screen.dart';
+import 'package:carrot_clone/utilities/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:carrot_clone/screens/around_me_screen.dart';
-import 'package:carrot_clone/screens/life_style_screen.dart';
+import 'package:carrot_clone/screens/local_life_screen.dart';
 
 class MainPageScreen extends StatefulWidget {
   @override
@@ -11,28 +18,44 @@ class MainPageScreen extends StatefulWidget {
 }
 
 class _MainPageScreenState extends State<MainPageScreen> {
-  var _pageIndex = 3;
-  var _pages = [
+  var _pageIndex = 4;
+
+  final List<String> _appBarTitles = [
+    '운서동',
+    '운서동',
+    '내 근처',
+    '채팅',
+    '나의 당근',
+  ];
+
+  final List _appBarActions = [
+    homeScreenActions(),
+    LocalLifeScreenActions(),
+    AroundMeScreenActions(),
+    chatScreenActions(),
+    myCarrotScreenActions(),
+  ];
+
+  final List<Widget> _pages = [
     HomePageScreen(),
-    LifeStyleScreen(),
+    LocalLifeScreen(),
     AroundMeScreen(),
     ChatListScreen(),
-    Container(),
+    MyCarrotScreen(),
   ];
+
+  BottomNavigationBarItem _bottomBarItem(String title, icon) {
+    return BottomNavigationBarItem(
+      title: Text(
+        title,
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      icon: icon,
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
-
-    BottomNavigationBarItem _bottomBarItem(String title, icon) {
-      return BottomNavigationBarItem(
-          title: Text(
-            title,
-            style: TextStyle(fontWeight: FontWeight.bold),
-          ),
-          icon: icon,
-
-      );
-    }
 
     return Scaffold(
       appBar: AppBar(
@@ -42,35 +65,10 @@ class _MainPageScreenState extends State<MainPageScreen> {
         bottomOpacity: 0.0,
         elevation: 1.5,
         title: Text(
-          '운서동',
-          style: TextStyle(
-              color: Colors.black87,
-              fontSize: 25.0,
-              fontWeight: FontWeight.w800),
+          _appBarTitles[_pageIndex],
+          style: kAppBarHeaderText,
         ),
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(
-                Icons.search,
-              size: 30.0,
-            ),
-            color: Colors.black,
-            onPressed: () => {},
-          ),
-          IconButton(
-            icon: Icon(
-                Icons.menu,
-                size: 35.0,
-            ),
-            color: Colors.black,
-            onPressed: () => {},
-          ),
-          IconButton(
-            icon: Icon(FontAwesomeIcons.bell),
-            color: Colors.black,
-            onPressed: () => {},
-          )
-        ],
+        actions: _appBarActions[_pageIndex],
       ),
       body: _pages[_pageIndex],
       bottomNavigationBar: BottomNavigationBar(
@@ -82,24 +80,11 @@ class _MainPageScreenState extends State<MainPageScreen> {
         },
         currentIndex: _pageIndex,
         items: <BottomNavigationBarItem>[
-          _bottomBarItem(
-              '홈',
-              Icon(
-                Icons.home,
-                size: 25.0,
-              )),
+          _bottomBarItem('홈',Icon(Icons.home,size: 25.0,)),
           _bottomBarItem('동네생활', Icon(FontAwesomeIcons.fileAlt)),
           _bottomBarItem('내 근처', Icon(FontAwesomeIcons.mapMarkerAlt)),
-          _bottomBarItem(
-              '채팅',
-              Icon(
-                FontAwesomeIcons.comments,
-              )),
-          _bottomBarItem(
-              '나의 당근',
-              Icon(
-                FontAwesomeIcons.userCircle,
-              )),
+          _bottomBarItem('채팅', Icon(FontAwesomeIcons.comments,)),
+          _bottomBarItem('나의 당근',Icon(FontAwesomeIcons.userCircle,)),
         ],
       ),
 

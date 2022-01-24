@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'home_page_article.dart';
+import 'home_screen_article.dart';
 
-class HomePageListItem extends StatelessWidget {
-  const HomePageListItem({
+class HomeScreenListItem extends StatelessWidget {
+  const HomeScreenListItem({
     Key? key,
     required this.thumbnail,
     required this.title,
@@ -39,7 +39,7 @@ class HomePageListItem extends StatelessWidget {
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(20.0, 0.0, 2.0, 0.0),
-                child: HomePageArticle(
+                child: HomeScreenArticle(
                   title: title,
                   subtitle: subtitle,
                   price: price,

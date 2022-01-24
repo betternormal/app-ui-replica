@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class HomePageArticle extends StatelessWidget {
-  const HomePageArticle({
+class HomeScreenArticle extends StatelessWidget {
+  const HomeScreenArticle({
     Key? key,
     required this.title,
     required this.subtitle,
