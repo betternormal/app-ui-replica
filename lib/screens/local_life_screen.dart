@@ -72,27 +72,7 @@ class _LocalLifeScreenState extends State<LocalLifeScreen> {
           } else {
             return Column(
               children: [
-                Container(
-                  color: Color(0xFFf0f1f4),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 15.0),
-                    child: SingleChildScrollView(
-                      scrollDirection: Axis.horizontal,
-                      child: Row(
-                        children: <Widget>[
-                          TagItem(tagTitle: '동네질문'),
-                          TagItem(tagTitle: '동네맛집'),
-                          TagItem(tagTitle: '동네소식'),
-                          TagItem(tagTitle: '분실/실종'),
-                          TagItem(tagTitle: '동네질문'),
-                          TagItem(tagTitle: '동네맛집'),
-                          TagItem(tagTitle: '동네소식'),
-                          TagItem(tagTitle: '분실/실종'),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
+                TagBar(),
                 Expanded(
                   child: ListView.separated(
                     shrinkWrap:true,
@@ -119,6 +99,34 @@ class _LocalLifeScreenState extends State<LocalLifeScreen> {
         child: const Icon(
           FontAwesomeIcons.pencilAlt,
           size: 20.0,
+        ),
+      ),
+    );
+  }
+}
+
+class TagBar extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Color(0xFFf0f1f4),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 15.0),
+        child: SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: <Widget>[
+              TagItem(tagTitle: '동네질문'),
+              TagItem(tagTitle: '동네맛집'),
+              TagItem(tagTitle: '동네소식'),
+              TagItem(tagTitle: '분실/실종'),
+              TagItem(tagTitle: '동네질문'),
+              TagItem(tagTitle: '동네맛집'),
+              TagItem(tagTitle: '동네소식'),
+              TagItem(tagTitle: '분실/실종'),
+            ],
+          ),
         ),
       ),
     );

@@ -5,14 +5,6 @@ List<Widget> AroundMeScreenActions() {
   return <Widget>[
     IconButton(
       icon: Icon(
-        Icons.search,
-        size: 30.0,
-      ),
-      color: Colors.black,
-      onPressed: () => {},
-    ),
-    IconButton(
-      icon: Icon(
         FontAwesomeIcons.edit,
         size: 20.0,
       ),
