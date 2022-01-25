@@ -20,3 +20,5 @@ const kText20 = TextStyle(
     fontSize: 20.0
 );
 
+const kNearlyWhite = Color(0xFFf9f9f9);
+

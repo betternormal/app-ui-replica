@@ -18,7 +18,7 @@ class MainPageScreen extends StatefulWidget {
 }
 
 class _MainPageScreenState extends State<MainPageScreen> {
-  var _pageIndex = 2;
+  var _pageIndex = 0;
 
   final List<String> _appBarTitles = [
     '운서동',

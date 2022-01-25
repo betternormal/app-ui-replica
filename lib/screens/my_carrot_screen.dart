@@ -16,13 +16,14 @@ Widget _carrotScreenTop() {
       children: <Widget>[
         ListTile(
             leading: CircleAvatar(
-              child: Icon(FontAwesomeIcons.userAlt),
+              child: Icon(FontAwesomeIcons.userAlt, color: kNearlyWhite,),
               radius: 30.0,
+              backgroundColor: Colors.black54,
             ),
             title: Text(
               '유저 아이디',
               style:
-              TextStyle(fontSize: 15.0, fontWeight: FontWeight.bold),
+              TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
             ),
             subtitle: Text('운서동 #7712893'),
             trailing: Icon(FontAwesomeIcons.chevronRight)),

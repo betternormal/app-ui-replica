@@ -24,7 +24,13 @@ class MyApp extends StatelessWidget {
             debugShowCheckedModeBanner: false,
             title: 'carrot market',
             theme: ThemeData(
-              primaryColor: Color(0xFFff723a),
+              indicatorColor: Colors.black,
+              tabBarTheme: TabBarTheme(
+                  indicatorSize: TabBarIndicatorSize.label,
+                  labelColor: Colors.black,
+                  unselectedLabelColor: Colors.red,
+                  labelStyle: TextStyle(color: Colors.pink[800]), // color for text
+              ),
             ),
             home: MainPageScreen(),
             // initialRoute: '/',
