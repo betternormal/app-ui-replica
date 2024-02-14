@@ -1,7 +1,9 @@
-# carrot_clone
-> 당근마켓 UI 연습  
->
-![carrot-ui](demo/demo.gif)  
+# Flutter App UI Replicas
+
+Replicated the UI of a commercial app entirely for learning purposes
+
+<img src="./demo/demo.gif" alt="demo.gif" width="300">  
+
 ```
 ┌── assets/            
 ├── lib/
